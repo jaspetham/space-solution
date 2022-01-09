@@ -1,3 +1,11 @@
+body {
+    background-color: hsl(var(--clr-dark));
+}
+
 section#home {
     height: 100vh;
+}
+
+section#typography,section#colors {
+    margin: 4rem 0;
 }
