@@ -3,12 +3,14 @@ import './DesignSystem.css';
 const DesignSystem = () => {
     return (
         <section id="home" className='bg-dark text-white'>
-            <div className="container">
-                <h1 className='ff-serif'>Design system</h1>
+            <div className="container" style={{
+                marginTop:'2rem'
+            }}>
+            <h1 className='ff-sans fs-600 letter-spacing-2 uppercase'>Design system</h1>
                 <section id="colors">
                     <h2 className='numbered-title'><span>01</span> colors</h2>
                     <div className="flex">
-                        <div className='flex-grow-1'>
+                        <div className='flex-grow-1 flow'>
                             <div className="bg-dark text-white" style={{
                                     padding:'3rem 1rem 1rem',
                                     border:'1px solid white'
@@ -18,7 +20,7 @@ const DesignSystem = () => {
                             <p><span className="text-light">RGB</span> 11, 13, 23</p>
                             <p><span className="text-light">HSL</span> 230°, 35%, 7%</p>
                         </div>
-                        <div className='flex-grow-1'>
+                        <div className='flex-grow-1 flow'>
                             <div className="bg-light text-dark" style={{
                                     padding:'3rem 1rem 1rem',
                                     border:'1px solid white'
@@ -28,7 +30,7 @@ const DesignSystem = () => {
                             <p><span className="text-light">RGB</span> 208, 214, 249</p>
                             <p><span className="text-light">HSL</span> 231°, 77%, 90%</p>
                         </div>
-                        <div className='flex-grow-1'>
+                        <div className='flex-grow-1 flow'>
                             <div className="bg-white text-dark" style={{
                                     padding:'3rem 1rem 1rem',
                                     border:'1px solid white'
@@ -92,9 +94,17 @@ const DesignSystem = () => {
                     <h2 className="numbered-title"><span>03</span> Interactive elements</h2>
                     
                     {/* <!-- navigation --> */}
-                    <div></div>
+                    <div>
+                        <nav>
+                            <ul className="primary-navigation underline-indicators flex">
+                                <li className='active'><a className="uppercase text-white letter-spacing-2" href="#"><span>01</span> Active</a></li>
+                                <li><a className="uppercase text-white letter-spacing-2" href="#"><span>02</span> Hovered</a></li>
+                                <li><a className="uppercase text-white letter-spacing-2" href="#"><span>03</span> Idle</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                     
-                    <div className="flex">
+                    <div className="flex indicator-wrap">
                         <div style={{
                             marginTop:'5rem'
                         }}>
@@ -104,18 +114,31 @@ const DesignSystem = () => {
                             </a>
                         </div>
                         
-                        <div 
+                        <div className='flow flow-space'
                             style={{
                                 marginBottom:'50vh'
-                            }}
+                            }} 
                         >
                             {/* <!-- Tabs --> */}
-                            
+                            <div className="tab-list underline-indicators flex">
+                                <button aria-selected="true" className="uppercase text-light bg-dark letter-spacing-1 ff-sans-cond">Moon</button>
+                                <button aria-selected="false" className="uppercase text-light bg-dark letter-spacing-1 ff-sans-cond">Mars</button>
+                                <button aria-selected="false" className="uppercase text-light bg-dark letter-spacing-1 ff-sans-cond">Europa</button>
+                            </div>
                             
                             {/* <!-- Dots --> */}
-                            
+                            <div className="dot-indicators flex justify-content-center">
+                                <button aria-selected="true"><span className="sr-only">Slide title</span></button>
+                                <button aria-selected="false"><span className="sr-only">Slide title</span></button>
+                                <button aria-selected="false"><span className="sr-only">Slide title</span></button>
+                            </div>
                             
                             {/* <!-- Numbers --> */}
+                            <div className="number-indicators grid place-content-center">
+                                <button aria-selected="true" className='grid place-content-center'><span className="ff-sans fs-600">1</span></button>
+                                <button aria-selected="false" className='grid place-content-center'><span className="ff-sans fs-600">2</span></button>
+                                <button aria-selected="false" className='grid place-content-center'><span className="ff-sans fs-600">3</span></button>
+                            </div>
                         </div>
                     </div>
                     
