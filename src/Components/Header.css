@@ -1,0 +1,18 @@
+header {
+    padding: 1rem 0;
+    padding-left: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .primary-navigation {
+    padding: 1rem;
+    padding-right: 15rem;
+    padding-left:5rem;
+    backdrop-filter: blur(10px);
+}
+
+header .primary-navigation {
+    --gap: 4rem;
+    --underline-gap: 1em;
+}
