@@ -1,0 +1,20 @@
+#home {
+    background-size: cover;
+    background-position: bottom center;
+    background-image: url('../../public/assets/home/background-home-mobile.jpg');
+}
+
+/* tablet size */
+@media (min-width: 35em) {
+    #home {
+        background-position: center center;
+        background-image: url('../../public/assets/home/background-home-tablet.jpg');
+    }
+}
+
+/* laptop size */
+@media (min-width: 45em) {
+    #home {
+        background-image: url('../../public/assets/home/background-home-desktop.jpg');
+    }
+}

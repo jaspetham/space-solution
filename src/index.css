@@ -23,12 +23,12 @@ code {
   --clr-white: 0 0% 100%;
 
   /* font-sizes */
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
   --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
+  --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
 
@@ -37,9 +37,28 @@ code {
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
 
-  /* space */
-  /* --flow-space:  */
 }
+
+/* tablet size */
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+  }
+}
+
+/* laptop size */
+@media (min-width: 45em) {
+  :root {
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.125rem;
+  }
+}
+
 
 /* ------------------- */
 /* Reset               */
@@ -83,6 +102,12 @@ body {
   min-height: 100vh;
 }
 
+section#home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
 /* make img and picture to easier to work with */
 img,
 picture {
@@ -120,9 +145,37 @@ select {
   gap: var(--gap, 1rem);
 }
 
+.flex.evenly-columns>* {
+  width: 100%;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-basis-100 {
+  flex-basis: 100%;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.place-content-center {
+  place-content: center;
+}
+
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
+}
+
+.d-block {
+  display: block;
 }
 
 /* * + * means that check element have sibling on top, if no then it will not run , refer below class as it is alternative , *:not(:first-child)*/
@@ -142,6 +195,41 @@ select {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
+}
+
+/* grid here */
+.grid-container {
+  /* border: 5px solid limegreen; */
+  display: grid;
+  text-align: center;
+  place-items: center;
+  padding-inline: 1rem;
+}
+
+.grid-container * {
+  max-width: 50ch;
+}
+
+@media (min-width: 45em) {
+  .grid-container {
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+  }
+
+  .grid-container>*:first-child {
+    grid-column: 2;
+    /* outline: 1px solid red; */
+  }
+
+  .grid-container>*:last-child {
+    grid-column: 3;
+    /* outline: 1px solid yellow; */
+  }
+
+  .grid-container--home {
+    padding-bottom:max(6rem,20vh);
+    align-items: end;
+  }
 }
 
 .sr-only {
@@ -275,35 +363,16 @@ select {
   color: hsl(var(--clr-white) /.25);
 }
 
-.flex-grow-1 {
-  flex-grow: 1;
-}
-
-.flex-basis-100 {
-  flex-basis: 100%;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.place-content-center {
-  place-content: center;
-}
-
 /* ------------------- */
 /* Componenets         */
 /* ------------------- */
 /* aspect ratio 1/1 = 1 width 1 height, 1/2 = 1 width 2 height , 2/1 = 2 width 1 height  */
 .large-button {
+  font-size: 2rem;
   position: relative;
   border-radius: 50%;
   padding: 0 2em;
-  display: grid;
+  display: inline-grid;
   place-content: center;
   aspect-ratio: 1;
   text-decoration: none;

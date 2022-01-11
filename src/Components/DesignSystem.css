@@ -2,16 +2,12 @@ body {
     background-color: hsl(var(--clr-dark));
 }
 
-section#home {
-    height: 100vh;
-}
-
 section#typography,
 section#colors {
     margin: 4rem 0;
 }
 
-.primary-navigation {
+#designSystem .primary-navigation {
     --gap: 8rem;
     --underline-gap: 2em;
     list-style: none;
@@ -19,20 +15,20 @@ section#colors {
     margin: 0;
 }
 
-.primary-navigation a {
+#designSystem .primary-navigation a {
     text-decoration: none;
 }
 
-.primary-navigation a>span {
+#designSystem .primary-navigation a>span {
     font-weight: 700;
     margin-right: .5em;
 }
 
-.tab-list {
+#designSystem .tab-list {
     --gap: 2rem;
 }
 
-.dot-indicators>* {
+#designSystem .dot-indicators>* {
     cursor: pointer;
     border: 0;
     border-radius: 50%;
@@ -40,18 +36,18 @@ section#colors {
     background: hsl(var(--clr-white) / .25);
 }
 
-.dot-indicators>*:hover,
-.dot-indicators>*:focus {
+#designSystem .dot-indicators>*:hover,
+#designSystem .dot-indicators>*:focus {
     background: hsl(var(--clr-white) / .5);
 }
 
-.dot-indicators>[aria-selected="true"],
-.number-indicators>[aria-selected="true"] {
+#designSystem .dot-indicators>[aria-selected="true"],
+#designSystem .number-indicators>[aria-selected="true"] {
     background: hsl(var(--clr-white) / 1);
     color: hsl(var(--clr-dark));
 }
 
-.number-indicators>* {
+#designSystem .number-indicators>* {
     cursor: pointer;
     padding: 2em;
     background: hsl(var(--clr-white)/0);
@@ -64,11 +60,11 @@ section#colors {
     height: 100%;
 }
 
-.number-indicators>*:hover,
-.number-indicators>*:focus {
+#designSystem .number-indicators>*:hover,
+#designSystem .number-indicators>*:focus {
     border: 1px solid hsl(var(--clr-white)/0.5);
 }
 
-.indicator-wrap {
+#designSystem .indicator-wrap {
     gap: 10rem
 }

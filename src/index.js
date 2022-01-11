@@ -1,14 +1,26 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import DesignSystem from './Components/DesignSystem';
+import Homepage from './Components/Homepage';
 import Header from './Components/Header';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Header/> */}
-    <App />
+    <Router>
+        <Routes>
+          <Route exact path="/" element={<Homepage/>}></Route>
+          <Route exact path="/design-system" element={<DesignSystem/>}></Route>
+      </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

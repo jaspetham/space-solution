@@ -2,7 +2,7 @@ import './DesignSystem.css';
 
 const DesignSystem = () => {
     return (
-        <section id="home" className='bg-dark text-white'>
+        <section id="designSystem" className='bg-dark text-white'>
             <div className="container" style={{
                 marginTop:'2rem'
             }}>
