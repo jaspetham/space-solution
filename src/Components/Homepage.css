@@ -1,4 +1,4 @@
-#home {
+.homepage {
     background-size: cover;
     background-position: bottom center;
     background-image: url('../../public/assets/home/background-home-mobile.jpg');
@@ -6,7 +6,7 @@
 
 /* tablet size */
 @media (min-width: 35em) {
-    #home {
+    .homepage {
         background-position: center center;
         background-image: url('../../public/assets/home/background-home-tablet.jpg');
     }
@@ -14,7 +14,7 @@
 
 /* laptop size */
 @media (min-width: 45em) {
-    #home {
+    .homepage {
         background-image: url('../../public/assets/home/background-home-desktop.jpg');
     }
 }

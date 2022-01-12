@@ -3,7 +3,7 @@ import './Homepage.css'
 
 const Homepage = () => {
     return (
-        <section id="home">
+        <main id="main" className='homepage'>
             <Header/>
             {/* <div className="flex container evenly-columns" style={{
                 maxWidth:'60rem'
@@ -35,7 +35,7 @@ const Homepage = () => {
                     </a>
                 </div>
             </div>
-        </section>
+        </main>
     )
 }
 

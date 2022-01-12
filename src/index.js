@@ -11,7 +11,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import DesignSystem from './Components/DesignSystem';
 import Homepage from './Components/Homepage';
-import Header from './Components/Header';
 
 ReactDOM.render(
   <React.StrictMode>
