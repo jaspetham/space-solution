@@ -6,6 +6,7 @@ const Header = () => {
             <div>
                 <img src="../assets/shared/logo.svg" alt="" />
             </div>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
             <nav>
                 <ul className="primary-navigation underline-indicators flex">
                     <li className="active"><a className="ff-serifs-cond uppercase text-white letter-spacing-2" href="#"><span>00</span>Home</a></li>
