@@ -11,12 +11,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import DesignSystem from './Components/DesignSystem';
 import Homepage from './Components/Homepage';
+import Destination from './Components/Destination';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
         <Routes>
-          <Route exact path="/" element={<Homepage/>}></Route>
+          <Route exact path="/" element={<><Homepage/></>}></Route>
+          <Route exact path="/destination" element={<><Destination/></>}></Route>
           <Route exact path="/design-system" element={<DesignSystem/>}></Route>
       </Routes>
     </Router>

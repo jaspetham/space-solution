@@ -27,7 +27,7 @@ code {
   --fs-800: 3.5rem;
   --fs-700: 1.5rem;
   --fs-600: 1rem;
-  --fs-500: 1.75rem;
+  --fs-500: 1rem;
   --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
@@ -42,7 +42,7 @@ code {
 .skip-to-content {
   position: absolute;
   z-index: 9999;
-  transform:translateY(-100%);
+  transform: translateY(-100%);
   background: hsl(var(--clr-white));
   color: hsl(var(--clr-dark));
   padding: .5em 1em;
@@ -50,15 +50,17 @@ code {
   transition: transform 250ms ease-in-out;
 }
 
-.skip-to-content:focus{
-  transform:translateY(0);
+.skip-to-content:focus {
+  transform: translateY(0);
 }
+
 /* tablet size */
 @media (min-width: 35em) {
   :root {
     --fs-800: 5rem;
     --fs-700: 2.5rem;
     --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
     --fs-400: 1rem;
   }
 }
@@ -69,6 +71,7 @@ code {
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
+    --fs-500: 1.75rem;
     --fs-400: 1.125rem;
   }
 }
@@ -112,6 +115,7 @@ p {
 body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
+  color: hsl(var(--clr-white));
   line-height: 1.5;
   min-height: 100vh;
   overflow-x: hidden;
@@ -210,41 +214,6 @@ select {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
-}
-
-/* grid here */
-.grid-container {
-  /* border: 5px solid limegreen; */
-  display: grid;
-  text-align: center;
-  place-items: center;
-  padding-inline: 1rem;
-}
-
-.grid-container * {
-  max-width: 50ch;
-}
-
-@media (min-width: 45em) {
-  .grid-container {
-    column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 50rem)) minmax(2rem, 1fr);
-  }
-
-  .grid-container>*:first-child {
-    grid-column: 2;
-    /* outline: 1px solid red; */
-  }
-
-  .grid-container>*:last-child {
-    grid-column: 3;
-    /* outline: 1px solid yellow; */
-  }
-
-  .grid-container--home {
-    padding-bottom: max(6rem, 20vh);
-    align-items: end;
-  }
 }
 
 .sr-only {
@@ -428,4 +397,109 @@ select {
 .underline-indicators>[aria-selected="true"] {
   color: .2em solid hsl(var(--clr-white) / 1);
   border-bottom: .2em solid hsl(var(--clr-white) / 1);
+}
+
+
+/* ------------------- */
+/* Layout              */
+/* ------------------- */
+.grid-container {
+  /* border: 5px solid limegreen; */
+  display: grid;
+  text-align: center;
+  place-items: center;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+}
+
+.grid-container p:not([class]) {
+  max-width: 50ch;
+}
+
+.numbered-title {
+  grid-area: title;
+}
+
+/* destination layout */
+.grid-container--destination {
+  grid-template-areas: 'title''image''tabs''content';
+  --flow-space: 2rem;
+}
+
+.grid-container--destination>img {
+  grid-area: image;
+  max-width: 60%;
+}
+
+.grid-container--destination>.tab-list {
+  grid-area: tabs;
+}
+
+.destination-info {
+  grid-area: content;
+}
+
+.destination-meta {
+  flex-direction: column;
+  border-top: 1px solid hsl(var(--clr-white) / .1);
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.destination-meta p {
+  font-size: 1.75rem;
+}
+
+/* tablet size */
+@media (min-width: 35em) {
+  .numbered-title {
+    justify-self: start;
+    margin-top: 2rem;
+  }
+
+  .destination-meta {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 45em) {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 50rem)) minmax(2rem, 1fr);
+  }
+
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+  }
+
+  .grid-container--home>*:first-child {
+    grid-column: 2;
+    /* outline: 1px solid red; */
+  }
+
+  .grid-container--home>*:last-child {
+    grid-column: 3;
+    /* outline: 1px solid yellow; */
+  }
+
+  .grid-container--destination {
+    justify-items: start;
+    align-items: start;
+    grid-template-areas:
+      '. title title .'
+      '. image tabs .'
+      '. image content .';
+  }
+
+  .grid-container--destination>img {
+    max-width: 90%;
+  }
+
+  .destination-meta {
+    --gap: min(6vw, 6rem);
+    justify-content: start;
+  }
 }
