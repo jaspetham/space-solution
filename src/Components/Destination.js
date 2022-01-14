@@ -10,12 +10,12 @@ const Destination = () => {
                 <h1 className='numbered-title'><span aria-hidden="true">01</span> Pick your destination</h1> 
                 <img src={moonImage} alt="moon" />
                  <div class="tab-list underline-indicators flex">
-                    <button aria-selected="true" class="uppercase ff-sans-cond text-light bg-dark letter-spacing-2">Moon</button>
-                    <button aria-selected="false" class="uppercase ff-sans-cond text-light bg-dark letter-spacing-2">Mars</button>
-                    <button aria-selected="false" class="uppercase ff-sans-cond text-light bg-dark letter-spacing-2">Europa</button>
-                    <button aria-selected="false" class="uppercase ff-sans-cond text-light bg-dark letter-spacing-2">Titan</button>
+                    <button aria-selected="true" class="uppercase ff-sans-cond text-light letter-spacing-2">Moon</button>
+                    <button aria-selected="false" class="uppercase ff-sans-cond text-light letter-spacing-2">Mars</button>
+                    <button aria-selected="false" class="uppercase ff-sans-cond text-light letter-spacing-2">Europa</button>
+                    <button aria-selected="false" class="uppercase ff-sans-cond text-light letter-spacing-2">Titan</button>
                 </div>
-                <article class="destination-info">
+                <article class="destination-info flow">
                     <h2 className='fs-800 uppercase ff-serif'>Moon</h2>
                     <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
                     regain perspective and come back refreshed. While you’re there, take in some history 

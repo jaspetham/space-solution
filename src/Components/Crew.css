@@ -1,0 +1,20 @@
+.crew {
+    background-size: cover;
+    background-position: bottom center;
+    background-image: url('../../public/assets/crew/background-crew-mobile.jpg');
+}
+
+/* tablet size */
+@media (min-width: 35em) {
+    .crew {
+        background-position: center center;
+        background-image: url('../../public/assets/crew/background-crew-tablet.jpg');
+    }
+}
+
+/* laptop size */
+@media (min-width: 45em) {
+    .crew {
+        background-image: url('../../public/assets/crew/background-crew-desktop.jpg');
+    }
+}

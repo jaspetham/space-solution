@@ -197,6 +197,10 @@ select {
   display: block;
 }
 
+.flow--space-small {
+  --flow-space: .75rem;
+}
+
 /* * + * means that check element have sibling on top, if no then it will not run , refer below class as it is alternative , *:not(:first-child)*/
 /* .flow>*+* {
   margin-top: 1rem;
@@ -383,9 +387,10 @@ select {
 
 .underline-indicators>* {
   border: 0;
-  padding: var(--underline-gap, 1em) 0;
+  padding: var(--underline-gap, .5rem) 0;
   cursor: pointer;
   border-bottom: .2em solid hsl(var(--clr-white) / 0);
+  background-color: transparent;
 }
 
 .underline-indicators>*:hover,
@@ -450,6 +455,34 @@ select {
   font-size: 1.75rem;
 }
 
+/* crew layout */
+.grid-container--crew {
+  grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content';
+  --flow-space: 2rem;
+}
+
+.grid-container--crew>img {
+  grid-area: image;
+  max-width: 60%;
+  border-bottom: 1px solid hsl(var(--clr-white)/.1)
+}
+
+.grid-container--crew>.dot-indicators {
+  grid-area: tabs;
+}
+
+.grid-container--crew>.crew-details {
+  grid-area: content;
+}
+
+.crew-details h2 {
+  color: hsl(var(--clr-light)/.5);
+}
+
 /* tablet size */
 @media (min-width: 35em) {
   .numbered-title {
@@ -460,6 +493,15 @@ select {
   .destination-meta {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .grid-container--crew {
+    padding-bottom: 0;
+    grid-template-areas:
+      'title'
+      'content'
+      'tabs'
+      'image';
   }
 }
 
@@ -477,12 +519,10 @@ select {
 
   .grid-container--home>*:first-child {
     grid-column: 2;
-    /* outline: 1px solid red; */
   }
 
   .grid-container--home>*:last-child {
     grid-column: 3;
-    /* outline: 1px solid yellow; */
   }
 
   .grid-container--destination {
@@ -492,14 +532,36 @@ select {
       '. title title .'
       '. image tabs .'
       '. image content .';
+    grid-template-rows: 80px 100px auto;
+  }
+
+  .grid-container--crew>img,
+  .grid-container--destination>img {
+    max-width: 90%;
   }
 
   .grid-container--destination>img {
-    max-width: 90%;
+    margin-top: 5rem;
   }
 
   .destination-meta {
     --gap: min(6vw, 6rem);
     justify-content: start;
+  }
+
+  .grid-container--crew {
+    grid-template-areas:
+      '. title title .'
+      '. content image .'
+      '. tabs image .';
+  }
+
+  .grid-container--crew>.dot-indicators,
+  .grid-container--crew>.crew-details {
+    justify-self: start;
+  }
+
+  .grid-container--crew>img {
+    align-self: end;
   }
 }
