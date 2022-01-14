@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    var headerHeight = $('header').outerHeight();
     const nav = document.querySelector('.primary-navigation');
     const navToggle = document.querySelector('.mobile-nav-toggle');
 

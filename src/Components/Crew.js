@@ -1,6 +1,7 @@
 import './Crew.css';
 import Header from './Header';
 import doughlasHurley from '../assets/crew/image-douglas-hurley.png';
+import doughlasHurleyP from '../assets/crew/image-douglas-hurley.webp';
 
 const Crew = () => {
     return (
@@ -23,7 +24,10 @@ const Crew = () => {
                     and former NASA astronaut. He launched into space for the third time as 
                     commander of Crew Dragon Demo-2.</p>       
                 </article>
-                <img src={doughlasHurley} alt="doughlasHurley" />
+                <picture>
+                    <source srcSet={doughlasHurleyP + ' x1'} type="image/webp"/>
+                    <img src={doughlasHurley} alt="doughlasHurley" />
+                </picture>
             </div>
         </main>
     )
