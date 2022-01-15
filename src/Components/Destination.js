@@ -15,30 +15,30 @@ const Destination = () => {
             <Header/>
             <div className='grid-container grid-container--destination flow'>
                 <h1 className='numbered-title'><span aria-hidden="true">01</span> Pick your destination</h1> 
-                <picture>
+                <picture id="moon-image">
                     <source srcSet={moonImageP + ' x1'} type="image/webp"/>
                     <img src={moonImage} alt="moon" />
                 </picture>
-                <picture hidden>
+                <picture hidden id="mars-image">
                     <source srcSet={marsImageP + ' x1'} type="image/webp"/>
                     <img src={marsImage} alt="mars" />
                 </picture>
-                <picture hidden>
+                <picture hidden id="europa-image">
                     <source srcSet={europaImageP + ' x1'} type="image/webp"/>
                     <img src={europaImage} alt="europa" />
                 </picture>
-                <picture hidden>
+                <picture hidden id="titan-image">
                     <source srcSet={titanImageP + ' x1'} type="image/webp"/>
                     <img src={titanImage} alt="titan" />
                 </picture>
                  <div className="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
-                    <button aria-selected="true" role="tab" aria-controls="moon-tab" tabIndex='0' className="uppercase ff-sans-cond text-light letter-spacing-2">Moon</button>
-                    <button aria-selected="false" role="tab" aria-controls="mars-tab" tabIndex='-1' className="uppercase ff-sans-cond text-light letter-spacing-2">Mars</button>
-                    <button aria-selected="false" role="tab" aria-controls="europa-tab" tabIndex='-1' className="uppercase ff-sans-cond text-light letter-spacing-2">Europa</button>
-                    <button aria-selected="false" role="tab" aria-controls="titan-tab" tabIndex='-1' className="uppercase ff-sans-cond text-light letter-spacing-2">Titan</button>
+                    <button aria-selected="true" role="tab" aria-controls="moon-tab"  tabIndex='0' data-image='moon-image' className="uppercase ff-sans-cond text-light letter-spacing-2">Moon</button>
+                    <button aria-selected="false" role="tab" aria-controls="mars-tab" tabIndex='-1' data-image='mars-image' className="uppercase ff-sans-cond text-light letter-spacing-2">Mars</button>
+                    <button aria-selected="false" role="tab" aria-controls="europa-tab" tabIndex='-1' data-image='europa-image' className="uppercase ff-sans-cond text-light letter-spacing-2">Europa</button>
+                    <button aria-selected="false" role="tab" aria-controls="titan-tab" tabIndex='-1' data-image='titan-image' className="uppercase ff-sans-cond text-light letter-spacing-2">Titan</button>
                 </div>
                 {/* moon */}
-                <article className="destination-info flow" id="moon-tab" tabIndex="0">
+                <article className="destination-info flow" id="moon-tab" tabIndex="0" role="tabpanel">
                     <h2 className='fs-800 uppercase ff-serif'>Moon</h2>
                     <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
                     regain perspective and come back refreshed. While you’re there, take in some history 
@@ -55,7 +55,7 @@ const Destination = () => {
                     </div>                    
                 </article>
                 {/* mars */}
-                <article hidden className="destination-info flow" id="mars-tab" tabIndex="1">
+                <article hidden className="destination-info flow" id="mars-tab" tabIndex="0" role="tabpanel">
                     <h2 className='fs-800 uppercase ff-serif'>Mars</h2>
                     <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
                     the tallest planetary mountain in our solar system. It’s two and a half times 
@@ -72,7 +72,7 @@ const Destination = () => {
                     </div>                    
                 </article>
                 {/* europa */}
-                <article hidden className="destination-info flow" id="europa-tab" tabIndex="2">
+                <article hidden className="destination-info flow" id="europa-tab" tabIndex="0" role="tabpanel">
                     <h2 className='fs-800 uppercase ff-serif'>Europa</h2>
                     <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
                     winter lover’s dream. With an icy surface, it’s perfect for a bit of 
@@ -90,7 +90,7 @@ const Destination = () => {
                     </div>                    
                 </article>
                 {/* titan */}
-                <article hidden className="destination-info flow" id="titan-tab" tabIndex="3">
+                <article hidden className="destination-info flow" id="titan-tab" tabIndex="0" role="tabpanel">
                     <h2 className='fs-800 uppercase ff-serif'>Titan</h2>
                     <p>The only moon known to have a dense atmosphere other than Earth, Titan 
                     is a home away from home (just a few hundred degrees colder!). As a 

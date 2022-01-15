@@ -566,7 +566,6 @@ select {
   }
 }
 
-
-[role="tab"]:focus {
-  color: limegreen;
+[hidden]{
+  display:none;
 }
