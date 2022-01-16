@@ -22,7 +22,7 @@ const Header = () => {
                 <ul data-visible={visible ? "true" : "false"} className="primary-navigation underline-indicators flex">
                     <NavLink to='/'>
                         <p className="ff-serifs-cond uppercase text-white letter-spacing-2" href="#">
-                            <span aria-hidden="true">00</span>Home
+                            <span aria-hidden="true">00</span>Homee
                         </p>
                     </NavLink>
                     <NavLink to='/destination'>
