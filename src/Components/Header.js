@@ -1,6 +1,7 @@
 import './Header.css';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from '../assets/shared/logo.svg'
  
 
 const Header = () => {
@@ -15,7 +16,7 @@ const Header = () => {
     return (
         <header className="primary-header flex">
             <div>
-                <img className='logo' src="../assets/shared/logo.svg" alt="" />
+                <img className='logo' src={Logo} alt="logo" />
             </div>
             <button onClick={isVisible} className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded={visible ? "true" : "false"}><span className="sr-only" aria-expanded={visible ? "true" : "false"}>Menu</span></button>
             <nav>
