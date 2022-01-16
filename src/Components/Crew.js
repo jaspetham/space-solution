@@ -8,7 +8,7 @@ import markShuttleworth from '../assets/crew/image-mark-shuttleworth.png';
 import markShuttleworthP from '../assets/crew/image-mark-shuttleworth.webp';
 import victorGlover from '../assets/crew/image-victor-glover.png';
 import victorGloverP from '../assets/crew/image-victor-glover.webp';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 
 const Crew = () => {
     function ChangeTab(){

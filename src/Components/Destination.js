@@ -8,7 +8,7 @@ import europaImage from '../assets/destination/image-europa.png';
 import europaImageP from '../assets/destination/image-europa.webp';
 import titanImage from '../assets/destination/image-titan.png';
 import titanImageP from '../assets/destination/image-titan.webp';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 
 const Destination = () => {
     function ChangeTab(){
