@@ -434,6 +434,7 @@ select {
 .grid-container--destination>picture {
   grid-area: image;
   max-width: 60%;
+  align-self: start;
 }
 
 .grid-container--destination>.tab-list {
@@ -535,7 +536,6 @@ select {
     grid-template-rows: 80px 100px auto;
   }
 
-  .grid-container--crew>picture,
   .grid-container--destination>picture {
     max-width: 90%;
   }
@@ -550,22 +550,25 @@ select {
   }
 
   .grid-container--crew {
+    grid-template-columns: minmax(1rem, 1fr) minmax(0,37rem) minmax(0,23rem) minmax(1rem, 1fr);
     grid-template-areas:
       '. title title .'
       '. content image .'
       '. tabs image .';
+    justify-items: start;
   }
 
-  .grid-container--crew>.dot-indicators,
   .grid-container--crew>.crew-details {
     justify-self: start;
   }
 
   .grid-container--crew>picture {
+    grid-column: span 2;
     align-self: end;
+    max-width: 100%;
   }
 }
 
-[hidden]{
-  display:none;
+[hidden] {
+  display: none;
 }

@@ -19,7 +19,8 @@ section#colors {
     text-decoration: none;
 }
 
-.primary-navigation a>span {
+.primary-navigation a>span,
+.primary-navigation p>span{
     font-weight: 700;
     margin-right: .5em;
 }
