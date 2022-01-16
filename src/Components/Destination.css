@@ -1,20 +1,20 @@
 .destination {
     background-size: cover;
     background-position: bottom center;
-    background-image: url('../../public/assets/destination/background-destination-mobile.jpg');
+    background-image: url('../assets/destination/background-destination-mobile.jpg');
 }
 
 /* tablet size */
 @media (min-width: 35em) {
     .destination {
         background-position: center center;
-        background-image: url('../../public/assets/destination/background-destination-tablet.jpg');
+        background-image: url('../assets/destination/background-destination-tablet.jpg');
     }
 }
 
 /* laptop size */
 @media (min-width: 45em) {
     .destination {
-        background-image: url('../../public/assets/destination/background-destination-desktop.jpg');
+        background-image: url('../assets/destination/background-destination-desktop.jpg');
     }
 }
