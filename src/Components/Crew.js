@@ -118,19 +118,19 @@ const Crew = () => {
                     </header>
                     <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. </p>       
                 </article>
-                <picture id="commander-image">
+                <picture className='crew-img' id="commander-image">
                     <source srcSet={doughlasHurleyP + ' x1'} type="image/webp"/>
                     <img src={doughlasHurley} alt="doughlasHurley" />
                 </picture>
-                <picture id="mission-image" hidden>
+                <picture className='crew-img' id="mission-image" hidden>
                     <source srcSet={markShuttleworthP + ' x1'} type="image/webp"/>
                     <img src={markShuttleworth} alt="markShuttleworth" />
                 </picture>
-                <picture id="pilot-image" hidden>
+                <picture className='crew-img' id="pilot-image" hidden>
                     <source srcSet={victorGloverP + ' x1'} type="image/webp"/>
                     <img src={victorGlover} alt="victorGlower" />
                 </picture>
-                <picture id="engineer-image" hidden>
+                <picture className='crew-img' id="engineer-image" hidden>
                     <source srcSet={anousHehP + ' x1'} type="image/webp"/>
                     <img src={anousHeh} alt="anousHeh" />
                 </picture>

@@ -82,19 +82,19 @@ const Destination = () => {
             <Header/>
             <div className='grid-container grid-container--destination flow'>
                 <h1 className='numbered-title'><span aria-hidden="true">01</span> Pick your destination</h1> 
-                <picture id="moon-image">
+                <picture className='planet-img' id="moon-image">
                     <source srcSet={moonImageP + ' x1'} type="image/webp"/>
                     <img src={moonImage} alt="moon" />
                 </picture>
-                <picture hidden id="mars-image">
+                <picture className='planet-img' hidden id="mars-image">
                     <source srcSet={marsImageP + ' x1'} type="image/webp"/>
                     <img src={marsImage} alt="mars" />
                 </picture>
-                <picture hidden id="europa-image">
+                <picture className='planet-img' hidden id="europa-image">
                     <source srcSet={europaImageP + ' x1'} type="image/webp"/>
                     <img src={europaImage} alt="europa" />
                 </picture>
-                <picture hidden id="titan-image">
+                <picture className='planet-img' hidden id="titan-image">
                     <source srcSet={titanImageP + ' x1'} type="image/webp"/>
                     <img src={titanImage} alt="titan" />
                 </picture>
