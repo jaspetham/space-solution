@@ -77,12 +77,12 @@ header .logo {
 
 @media (min-width: 35em) {
     header .primary-navigation {
-        padding-inline: clamp(2rem, 7vw, 7rem);
+        padding-inline: clamp(2rem, 4vw, 7rem);
     }
 }
 
 @media (min-width: 35em) and (max-width: 44.999em) {
-    header .primary-navigation a>span {
+    header :is(.primary-navigation a>span, .primary-navigation p>span) {
         display: none;
     }
 }
@@ -100,10 +100,10 @@ header .logo {
         width: 100%;
         background: hsl(var(--clr-white)/.25);
         margin-right: -2.5rem;
-        order:1;
+        order: 1;
     }
 
-    header nav{
-        order:2;
+    header nav {
+        order: 2;
     }
 }

@@ -50,15 +50,14 @@ section#colors {
 
 .number-indicators>* {
     cursor: pointer;
-    padding: 2em;
     background: hsl(var(--clr-white)/0);
     border: 1px solid hsl(var(--clr-white) / .25);
     border-radius: 50%;
     color: hsl(var(--clr-white));
     aspect-ratio: 1;
-    max-width: 80px;
-    max-height: 80px;
-    height: 100%;
+    padding:max(3vh,.5rem);
+    min-height: 30px;
+    min-width: 30px;
 }
 
 .number-indicators>*:hover,

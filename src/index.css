@@ -201,6 +201,10 @@ select {
   --flow-space: .75rem;
 }
 
+.align-self-end {
+  align-self: end;
+}
+
 /* * + * means that check element have sibling on top, if no then it will not run , refer below class as it is alternative , *:not(:first-child)*/
 /* .flow>*+* {
   margin-top: 1rem;
@@ -356,10 +360,10 @@ select {
 /* ------------------- */
 /* aspect ratio 1/1 = 1 width 1 height, 1/2 = 1 width 2 height , 2/1 = 2 width 1 height  */
 .large-button {
-  font-size: 2rem;
+  font-size: min(4vh, 2rem);
   position: relative;
   border-radius: 50%;
-  padding: 0 2em;
+  padding: 0 min(4vh, 2rem);
   display: inline-grid;
   place-content: center;
   aspect-ratio: 1;
@@ -457,7 +461,8 @@ select {
 }
 
 /* crew layout */
-.grid-container--crew {
+.grid-container--crew,
+.grid-container--technology {
   grid-template-areas:
     'title'
     'image'
@@ -476,17 +481,57 @@ select {
   grid-area: tabs;
 }
 
-.grid-container--crew>.crew-details {
+.grid-container--crew>.crew-details,
+.grid-container--technology>.technology-details {
   grid-area: content;
 }
 
-.crew-details h2 {
+:is(.crew-details, .technology-details) h2 {
   color: hsl(var(--clr-light)/.5);
+}
+
+/* technology layout */
+.grid-container--technology>picture {
+  grid-area: image;
+}
+
+.grid-container--technology>picture#launch-image {
+  content: url('./assets/technology/image-launch-vehicle-landscape.jpg');
+}
+
+.grid-container--technology>picture#port-image {
+  content: url('./assets/technology/image-spaceport-landscape.jpg');
+}
+
+.grid-container--technology>picture#capsule-image {
+  content: url('./assets/technology/image-space-capsule-landscape.jpg');
+}
+
+.grid-container--technology>.number-indicators {
+  grid-area: tabs;
+}
+
+.number-indicators>button>span {
+  pointer-events: none;
+}
+
+.grid-container--technology>picture#launch-image {
+  content: url('./assets/technology/image-launch-vehicle-landscape.jpg');
+}
+
+.grid-container--technology>picture#port-image {
+  content: url('./assets/technology/image-spaceport-landscape.jpg');
+}
+
+.grid-container--technology>picture#capsule-image {
+  content: url('./assets/technology/image-space-capsule-landscape.jpg');
 }
 
 /* tablet size */
 @media (min-width: 35em) {
-  .numbered-title {
+
+  .numbered-title,
+  .grid-container--home {
     justify-self: start;
     margin-top: 2rem;
   }
@@ -498,8 +543,7 @@ select {
 
   .grid-container--crew {
     padding-bottom: 0;
-    grid-template-areas:
-      'title'
+    grid-template-areas: 'title'
       'content'
       'tabs'
       'image';
@@ -529,8 +573,7 @@ select {
   .grid-container--destination {
     justify-items: start;
     align-items: start;
-    grid-template-areas:
-      '. title title .'
+    grid-template-areas: '. title title .'
       '. image tabs .'
       '. image content .';
     grid-template-rows: 80px 100px auto;
@@ -550,9 +593,8 @@ select {
   }
 
   .grid-container--crew {
-    grid-template-columns: minmax(1rem, 1fr) minmax(0,40rem) minmax(0,20rem) minmax(1rem, 1fr);
-    grid-template-areas:
-      '. title title .'
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 20rem) minmax(1rem, 1fr);
+    grid-template-areas: '. title title .'
       '. content image .'
       '. tabs image .';
     justify-items: start;
@@ -562,10 +604,36 @@ select {
     justify-self: start;
   }
 
-  .grid-container--crew>picture {
+  .grid-container--crew>picture,
+  .grid-container--technology>picture {
     grid-column: span 2;
     align-self: end;
     max-width: 100%;
+  }
+
+  .grid-container--technology {
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 5rem) minmax(0, 40rem) minmax(0, 20rem);
+    grid-template-areas:
+      '. title title .'
+      '. tabs content image';
+    justify-items: start;
+    padding-right: 0;
+  }
+
+  .grid-container--technology>.number-indicators {
+    flex-direction: column;
+  }
+
+  .grid-container--technology>picture#launch-image {
+    content: url('./assets/technology/image-launch-vehicle-portrait.jpg');
+  }
+
+  .grid-container--technology>picture#port-image {
+    content: url('./assets/technology/image-spaceport-portrait.jpg');
+  }
+
+  .grid-container--technology>picture#capsule-image {
+    content: url('./assets/technology/image-space-capsule-portrait.jpg');
   }
 }
 
