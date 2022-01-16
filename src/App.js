@@ -14,10 +14,10 @@ function App() {
     <Router basename='/space-solution'>
         <Routes>
           <Route exact path="/" element={<><Homepage/></>}></Route>
-          <Route exact path="/destination" element={<><Destination/></>}></Route>
-          <Route exact path="/crew" element={<><Crew/></>}></Route>
-          <Route exact path="/technology" element={<><Technology/></>}></Route>
-          <Route exact path="/design-system" element={<DesignSystem/>}></Route>
+          <Route path="/destination" element={<><Destination/></>}></Route>
+          <Route path="/crew" element={<><Crew/></>}></Route>
+          <Route path="/technology" element={<><Technology/></>}></Route>
+          <Route path="/design-system" element={<DesignSystem/>}></Route>
       </Routes>
     </Router>
   );
