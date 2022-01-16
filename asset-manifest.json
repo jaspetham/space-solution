@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/space-solution/static/css/main.ef24f0e9.css",
-    "main.js": "/space-solution/static/js/main.f79ee69c.js",
+    "main.js": "/space-solution/static/js/main.0da5491e.js",
     "static/js/787.aaa4cb10.chunk.js": "/space-solution/static/js/787.aaa4cb10.chunk.js",
     "static/media/image-victor-glover.png": "/space-solution/static/media/image-victor-glover.8a9a5424588b73ec61c2.png",
     "static/media/image-anousheh-ansari.png": "/space-solution/static/media/image-anousheh-ansari.2d647128496ddc638acd.png",
@@ -38,11 +38,11 @@
     "static/media/icon-close.svg": "/space-solution/static/media/icon-close.d47fda63cbd8b3fedbbc.svg",
     "static/media/icon-hamburger.svg": "/space-solution/static/media/icon-hamburger.5273efa7c50e96ef3e51.svg",
     "main.ef24f0e9.css.map": "/space-solution/static/css/main.ef24f0e9.css.map",
-    "main.f79ee69c.js.map": "/space-solution/static/js/main.f79ee69c.js.map",
+    "main.0da5491e.js.map": "/space-solution/static/js/main.0da5491e.js.map",
     "787.aaa4cb10.chunk.js.map": "/space-solution/static/js/787.aaa4cb10.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ef24f0e9.css",
-    "static/js/main.f79ee69c.js"
+    "static/js/main.0da5491e.js"
   ]
 }
