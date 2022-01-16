@@ -11,7 +11,7 @@ import Crew from './Components/Crew';
 import Technology from './Components/Technology';
 function App() {
   return (
-    <Router>
+    <Router basename='/space-solution'>
         <Routes>
           <Route exact path="/" element={<><Homepage/></>}></Route>
           <Route exact path="/destination" element={<><Destination/></>}></Route>

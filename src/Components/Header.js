@@ -31,7 +31,7 @@ const Header = () => {
                             <span aria-hidden="true">01</span>Destination
                         </p>
                     </NavLink>
-                    <NavLink to='/Crew'>
+                    <NavLink to='/crew'>
                         <p className="ff-serifs-cond uppercase text-white letter-spacing-2" href="#">
                             <span aria-hidden="true">02</span>Crew
                         </p>
