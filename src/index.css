@@ -527,6 +527,10 @@ select {
   content: url('./assets/technology/image-space-capsule-landscape.jpg');
 }
 
+.home-btn-wrap {
+  align-self: end;
+}
+
 /* tablet size */
 @media (min-width: 35em) {
 
@@ -548,6 +552,7 @@ select {
       'tabs'
       'image';
   }
+
 }
 
 @media (min-width: 45em) {
@@ -612,10 +617,10 @@ select {
   }
 
   .grid-container--technology {
-    grid-template-columns: minmax(1rem, 1fr) minmax(0, 5rem) minmax(0, 40rem) minmax(0, 20rem);
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 10rem) minmax(0, 40rem) minmax(0, 20rem) minmax(1rem, 1fr);
     grid-template-areas:
-      '. title title .'
-      '. tabs content image';
+      '. title title . .'
+      '. tabs content image .';
     justify-items: start;
     padding-right: 0;
   }
@@ -634,6 +639,18 @@ select {
 
   .grid-container--technology>picture#capsule-image {
     content: url('./assets/technology/image-space-capsule-portrait.jpg');
+  }
+
+  .home-btn-wrap {
+    align-self: center;
+  }
+
+  .home-detail {
+    align-self: center;
+  }
+
+  .grid-container--technology>:is(.number-indicators,.technology-details,picture){
+    align-self: start;
   }
 }
 
