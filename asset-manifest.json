@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/space-solution/static/css/main.0e3bc90f.css",
+    "main.css": "/space-solution/static/css/main.e01a5a64.css",
     "main.js": "/space-solution/static/js/main.113f4e0e.js",
     "static/js/787.aaa4cb10.chunk.js": "/space-solution/static/js/787.aaa4cb10.chunk.js",
     "static/media/image-victor-glover.png": "/space-solution/static/media/image-victor-glover.8a9a5424588b73ec61c2.png",
@@ -39,12 +39,12 @@
     "static/media/logo.svg": "/space-solution/static/media/logo.565f7f2c0534403f11b71994f4311210.svg",
     "static/media/icon-close.svg": "/space-solution/static/media/icon-close.d47fda63cbd8b3fedbbc.svg",
     "static/media/icon-hamburger.svg": "/space-solution/static/media/icon-hamburger.5273efa7c50e96ef3e51.svg",
-    "main.0e3bc90f.css.map": "/space-solution/static/css/main.0e3bc90f.css.map",
+    "main.e01a5a64.css.map": "/space-solution/static/css/main.e01a5a64.css.map",
     "main.113f4e0e.js.map": "/space-solution/static/js/main.113f4e0e.js.map",
     "787.aaa4cb10.chunk.js.map": "/space-solution/static/js/787.aaa4cb10.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e3bc90f.css",
+    "static/css/main.e01a5a64.css",
     "static/js/main.113f4e0e.js"
   ]
 }
