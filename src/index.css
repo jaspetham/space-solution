@@ -649,10 +649,14 @@ select {
     align-self: center;
   }
 
-  .grid-container--technology>:is(.number-indicators,.technology-details,picture){
+}
+
+@media (min-width: 90em) {
+  .grid-container--technology>:is(.number-indicators, .technology-details, picture) {
     align-self: start;
   }
 }
+
 
 [hidden] {
   display: none;
