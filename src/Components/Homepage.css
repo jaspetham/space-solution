@@ -1,20 +1,20 @@
 .homepage {
     background-size: cover;
     background-position: bottom center;
-    background-image: url('../../public/assets/home/background-home-mobile.jpg');
+    background-image: url('../assets/home/background-home-mobile.jpg');
 }
 
 /* tablet size */
 @media (min-width: 35em) {
     .homepage {
         background-position: center center;
-        background-image: url('../../public/assets/home/background-home-tablet.jpg');
+        background-image: url('../assets/home/background-home-tablet.jpg');
     }
 }
 
 /* laptop size */
 @media (min-width: 45em) {
     .homepage {
-        background-image: url('../../public/assets/home/background-home-desktop.jpg');
+        background-image: url('../assets/home/background-home-desktop.jpg');
     }
 }
