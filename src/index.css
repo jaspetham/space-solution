@@ -767,4 +767,8 @@ picture.crew-img[hidden] {
 :is(article.crew-details,
   picture.crew-img)[hidden] {
   display: block;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
 }
