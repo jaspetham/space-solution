@@ -123,8 +123,10 @@ body {
 
 main {
   min-height: 100vh;
+  max-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr;
+  overflow:hidden;
 }
 
 /* make img and picture to easier to work with */
@@ -757,7 +759,6 @@ picture.crew-img[hidden] {
 /* destination when hidden */
 :is(article.destination-info,
   picture.planet-img)[hidden] {
-  width: 0;
   height: 0;
   opacity: 0;
   visibility: hidden;
@@ -766,9 +767,6 @@ picture.crew-img[hidden] {
 /* crew when hidden */
 :is(article.crew-details,
   picture.crew-img)[hidden] {
-  display: block;
-  width: 0;
-  height: 0;
   opacity: 0;
   visibility: hidden;
 }
